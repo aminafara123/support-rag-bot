@@ -1,0 +1,8 @@
+fastapi>=0.110,<1
+uvicorn>=0.27,<1
+scikit-learn>=1.4,<2
+numpy>=1.24,<3
+httpx>=0.27,<1
+pytest>=8,<9
+# Optional: enable PDF ingestion in sample_docs/ by installing pdfplumber
+# pdfplumber>=0.10,<1

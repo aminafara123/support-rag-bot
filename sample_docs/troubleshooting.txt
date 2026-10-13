@@ -1,0 +1,16 @@
+Troubleshooting Nimbus
+
+Dashboard shows "No data"
+This usually means the data source query returned zero rows, or the connection expired. Open Data > Sources and click "Test connection". If it fails, re-enter your connection string. Remember that Nimbus only runs read-only queries.
+
+Charts are slow to load
+Slow charts are almost always caused by expensive queries. Try adding a date filter, limiting rows, or creating a database index on the columns you group by. Business plan customers can contact support for a query review.
+
+I didn't get the password reset email
+Check your spam folder first. Reset links expire after 1 hour, so request a new one if it's old. If your workspace uses SSO, password reset is disabled and you must sign in through your identity provider.
+
+Invited teammate can't log in
+Invitation links expire after 7 days. Re-send the invite from Settings > Members. If SSO is enforced, make sure the teammate has been assigned the Nimbus app in your identity provider.
+
+Still stuck?
+Email support@nimbus.example with your workspace name and a screenshot. Pro and Business customers get priority response times.
