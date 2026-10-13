@@ -1,3 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "support-rag-bot"
+version = "0.1.0"
+description = "A retrieval-augmented customer-support chatbot that answers only from a client's own docs, with inline citations and an embeddable chat widget."
+authors = [{ name = "Al Amin Bashir Afara", email = "aminafara123@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110,<1",
+    "uvicorn>=0.27,<1",
+    "scikit-learn>=1.4,<2",
+    "numpy>=1.24,<3",
+    "httpx>=0.27,<1",
+]
+
+[project.scripts]
+support-rag-bot = "support_rag.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["support_rag"]
+
+# Widget UI and sample docs the server reads at runtime (ROOT = package parent).
+[tool.hatch.build.targets.wheel.force-include]
+"static" = "static"
+"sample_docs" = "sample_docs"
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
 addopts = "-q"

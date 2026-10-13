@@ -51,3 +51,18 @@ def chat(req: ChatRequest):
     if not q:
         return {"answer": "Please enter a question.", "citations": [], "disclaimer": rag.DISCLAIMER}
     return rag.answer(q, get_retriever())
+
+
+def main():
+    """Console entry point: serve the app with uvicorn (HOST/PORT from env)."""
+    import uvicorn
+
+    uvicorn.run(
+        "support_rag.server:app",
+        host=os.getenv("HOST", "0.0.0.0"),
+        port=int(os.getenv("PORT", "8000")),
+    )
+
+
+if __name__ == "__main__":
+    main()

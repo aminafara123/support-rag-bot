@@ -29,6 +29,16 @@ flowchart LR
     G --> H[Cited answer<br/>answer + sources]
 ```
 
+## Install
+
+```bash
+# install as a command-line tool (recommended)
+pipx install git+https://github.com/aminafara123/support-rag-bot
+support-rag-bot          # serves the API + widget (HOST / PORT from env, default 0.0.0.0:8000)
+```
+
+Or install into the current environment from a clone with `pip install .`. The `make` targets below still work for local development.
+
 ## Quickstart
 
 ```bash
